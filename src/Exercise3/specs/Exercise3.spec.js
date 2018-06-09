@@ -1,13 +1,13 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import Exercise2 from '../Exercise2';
+import Exercise3 from '../Exercise3';
 
-describe('Exercise2', () => {
+describe('Exercise3', () => {
   let component;
   let instance;
   
   beforeEach(() => {
-    component = shallow(<Exercise2/>);
+    component = shallow(<Exercise3/>);
     instance = component.instance();
   });
   
@@ -18,8 +18,8 @@ describe('Exercise2', () => {
 
     it('should walk the array in spiral', () => {
       const array = instance.generateArray();
-
-      expect(instance.generateWalk(array)).toEqual('1-2-3-4-8-12-16-15-14-13-9-5-6-7-11-10');
+      
+      expect(instance.generateWalk(array)).toEqual('1-2-3-4-5-6-12-18-17-16-15-14-13-7-8-9-10-11');
     });
   });
 });
